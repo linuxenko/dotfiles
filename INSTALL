@@ -1,0 +1,26 @@
+
+i3-gaps
+
+# clone the repository
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+
+# do this if you want the stable branch, skip it if you want the dev branch (gaps-next)
+git checkout gaps && git pull
+
+# compile & install
+make
+sudo make install
+
+# Dependencies  ubuntu
+
+libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev
+
+# arch
+#
+pacman -S --needed base-devel
+
+git clone https://aur.archlinux.org/i3-gaps-git.git
+
+makepkg -sri
+

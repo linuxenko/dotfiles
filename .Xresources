@@ -1,0 +1,88 @@
+! # xrdb ~/.Xdefaults 
+
+
+xterm*utf8: true
+xterm*faceName: xft:bitstream vera sans mono:pixelsize=14:antialias=true
+xterm*faceNameDoublesize: xft:bitstream vera sans monopixelsize=14:antialias=true
+!xterm*faceName: xft:DejaVu Sans Mono:style=Book:pixelsize=14:antialias=true
+!xterm*faceNameDoublesize: xft:bitstream vera sans monopixelsize=14:antialias=true
+
+!xterm*faceSize: 10 
+xterm*borderWidth: 0
+XTerm*internalBorder: 0
+
+xterm*scaleHeight: 1.01
+
+
+xterm.*.metaSendsEscape: true
+
+xterm*selectToClipboard: true
+
+! ! ------------------------------------------------------------------------------
+! ! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ! ------------------------------------------------------------------------------
+! ! --- http://ciembor.github.com/4bit -------------------------------------------
+! ! ------------------------------------------------------------------------------
+!
+! ! --- special colors ---
+!
+*background: #222222
+!*foreground: #e6e3c6
+*foreground: #eeeeee
+!
+! --- standard colors ---
+!
+! black
+*color0: #151515
+!
+! bright_black
+*color8: #3e3c3a
+!
+! red
+*color1: #a3291b
+!
+! bright_red
+*color9: #ce3b2b
+!
+! green
+*color2: #7a961b
+!
+! bright_green
+*color10: #7a961b
+!
+! yellow
+*color3: #cc880e
+!
+! bright_yellow
+*color11: #ffad19
+!
+! blue
+*color4: #485664
+!
+! bright_blue
+*color12: #5d6d7d
+!
+! magenta
+*color5: #5f7a5f
+!
+! bright_magenta
+*color13: #7c9d7c
+!
+! cyan
+*color6: #7a88a3
+!
+! bright_cyan
+*color14: #9baccd
+!
+! white
+*color7: #e6e3c6
+!
+! bright_white
+*color15: #EEEEEC
+!
+!
+! ! ------------------------------------------------------------------------------
+! ! --- end of terminal colors section -------------------------------------------
+! ! ------------------------------------------------------------------------------
+!
+!

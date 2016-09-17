@@ -1,0 +1,35 @@
+#!/bin/sh
+
+if [ $# -ne 1 -o ! -f "$1" ]; then
+    echo "usage: ${0##*/} FILE" >&2
+    exit 1
+fi
+
+FILES="$(dirname "$1")"/*
+IMAGES=""
+
+for i in $FILES ;do
+  IS_IMAGE=$(file -i $i 2>&1| grep "image/" | wc -l )
+
+  if [ $IS_IMAGE -eq 1 ] ; then 
+    IMAGES="$IMAGES\n$i" 
+  fi
+done
+IMAGES=`echo `$IMAGES | grep "./"``
+FILENO=`echo $IMAGES | grep -n $1 | awk -F ":" '{print $1}'`
+FILENO=`expr $FILENO - 1`
+
+echo "$IMAGES" | sxiv -a -i -n "$FILENO"
+
+
+#file -i "$(dirname "$FILENAME")"/* \
+#    | awk -F ': *' -v f="$FILENAME" '
+#        $2 ~ "^image" {
+#            files[cnt++] = $1;
+#            if ($1 == f)
+#                n = cnt;
+#        } 
+#        END {
+#            for (i = 0; i < cnt; i++)
+#                print files[i] | "sxiv -i -n " n;
+#        }'
