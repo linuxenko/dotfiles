@@ -22,8 +22,8 @@ set ruler
 set nohlsearch
 " " Hightlight search results while typing
 set incsearch
-" case insensitive search  
-set ignorecase  
+" case insensitive search
+set ignorecase
 set smartcase
 " " Show line numbers
 set number
@@ -38,12 +38,31 @@ set novisualbell
 " no line wrapping
 " set nowrap
 
-" Repeat one more time for screen 
-" set visualbell 
-"
+" Repeat one more time for screen
+" set visualbell
 
-set t_vb=
-set tm=500
+" Allow cursor keys in insert mode
+set esckeys
+" Optimize for fast terminal connections
+set ttyfast
+" Don’t add empty newlines at the end of files
+set binary
+set noeol
+
+" Change mapleader {{{
+" let mapleader=","
+
+" Centralize backups, swapfiles and undo history
+" set backupdir=~/.vim/backups
+" set directory=~/.vim/swaps
+" if exists("&undodir")
+" set undodir=~/.vim/undo
+" endif
+
+" Don’t create backups when editing files in certain directories
+" set backupskip=/tmp/*,/var/tmp/*
+" }}}
+
 " Enable filetype detection test
 filetype on
 filetype plugin on
@@ -89,6 +108,18 @@ set matchtime=1
 " and apply operations to all of selection including last char
 " set selection=exclusive
 
+" Enable per-directory .vimrc files and disable unsafe commands in them
+set exrc
+set secure
+
+" Respect modeline in files
+" set modeline
+" set modelines=4
+
+" Show “invisible” characters
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set list
+set lcs=tab:▸\ ,trail:·
 
 " Bind CTRl + A to toggle NerdTree
 " SCREEN Compatibility broken with  nnoremap <C-a> :NERDTreeToggle<CR>
@@ -259,6 +290,3 @@ endfunction
 
 vnoremap <C-m> :update<CR>:call MKTex()<CR>:redraw<CR>
 noremap <C-m> :update<CR>:call MKTex()<CR>:redraw<CR>
-
-
-
