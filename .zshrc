@@ -247,6 +247,17 @@ alias cm='git commit -a'
 alias push='git push origin'
 alias pull='git pull origin'
 
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
 #
 # If running in screen, set the window title to the command about to be executed
 preexec() {
@@ -257,3 +268,6 @@ preexec() {
 #premd() {
 #    [ -n "$WINDOW" ] && screen -X title '' 
 #}
+
+# added by travis gem
+[ -f /home/sveta/.travis/travis.sh ] && source /home/sveta/.travis/travis.sh
