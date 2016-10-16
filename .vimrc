@@ -121,14 +121,16 @@ set secure
 set list
 set lcs=tab:▸\ ,trail:·
 
+
 " Bind CTRl + A to toggle NerdTree
 " SCREEN Compatibility broken with  nnoremap <C-a> :NERDTreeToggle<CR>
 nnoremap <C-e> :NERDTreeToggle<CR>
 
 " Show hidden files in NerdTree  
 let NERDTreeShowHidden=1
+
 " " Setup default folder for NerdTree
-" " autocmd VimEnter * NERDTree ~/Path/to/Project
+" autocmd VimEnter * NERDTree ~/Projects
 "
 " " Ctrl + left arrow switch to prev tab 
 " " (yeah yeah, one file per tab's a bad pratice blah blah blah)
