@@ -50,7 +50,7 @@ set binary
 set noeol
 
 " Change mapleader {{{
-" let mapleader=","
+let mapleader=","
 
 " Centralize backups, swapfiles and undo history
 " set backupdir=~/.vim/backups
@@ -138,7 +138,7 @@ let NERDTreeShowHidden=1
 " " Ctrl + right arrow switch to next tab
 " nnoremap <C-right> :tabn<CR>
 
-" Bind buffers 
+" Bind buffers
 
 nnoremap <C-left> :bp<CR>
 nnoremap <C-right> :bn<CR>
@@ -290,5 +290,11 @@ function! MKTex()
   endif
 endfunction
 
-vnoremap <C-m> :update<CR>:call MKTex()<CR>:redraw<CR>
-noremap <C-m> :update<CR>:call MKTex()<CR>:redraw<CR>
+vnoremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
+noremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
+
+
+" Mycomment indent 
+
+let g:mycomment_indent = "^*"
+
