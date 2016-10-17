@@ -10,14 +10,14 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
-    finish
-endif
-let g:loaded_syntastic_html_textlint_checker = 1
+"if exists('g:loaded_syntastic_html_textlint_checker')
+"    finish
+"endif
+"let g:loaded_syntastic_html_textlint_checker = 1
 
-call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+"call g:SyntasticRegistry.CreateAndRegisterChecker({
+"    \ 'filetype': 'html',
+"    \ 'name': 'textlint',
+"    \ 'redirect': 'text/textlint'})
 
 " vim: set sw=4 sts=4 et fdm=marker:
