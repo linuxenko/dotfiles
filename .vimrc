@@ -221,7 +221,7 @@ let g:ctrlp_custom_ignore = {
 
 " vim-jsx
 let g:jsx_ext_required = 0
-"let g:jsx_pragma_required = 1
+" let g:jsx_pragma_required = 1
 
 
 
@@ -235,10 +235,11 @@ let g:jsdoc_return_type = 1
 let g:jsdoc_return_description = 1
 let g:jsdoc_access_descriptions = 1
 let g:jsdoc_underscore_private = 1
-let g:jsdoc_allow_shorthand = 1
+" Deprecated (?)
+" let g:jsdoc_allow_shorthand = 1
 let g:jsdoc_enable_es6 = 1
 
-nmap <silent> <C-l> <Plug>(jsdoc)
+nmap <silent> <leader>l <Plug>(jsdoc)
 
 
 " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.  
@@ -298,3 +299,6 @@ noremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
 
 let g:mycomment_indent = "^*"
 
+
+" Map leader redo shortcut
+noremap ,r :redo<CR>
