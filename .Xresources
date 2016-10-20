@@ -1,6 +1,5 @@
 ! # xrdb ~/.Xdefaults 
 
-
 xterm*utf8: true
 xterm*faceName: xft:bitstream vera sans mono:pixelsize=14:antialias=true
 xterm*faceNameDoublesize: xft:bitstream vera sans monopixelsize=14:antialias=true
@@ -36,7 +35,8 @@ xterm*selectToClipboard: true
 *color0: #151515
 !
 ! bright_black
-*color8: #3e3c3a
+! *color8: #3e3c3a
+*color8: #8a8a8a
 !
 ! red
 *color1: #a3291b
