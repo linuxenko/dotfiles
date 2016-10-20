@@ -195,7 +195,8 @@ set colorcolumn=80
 
 
 " Default Colors for CursorLine
-hi CursorLine cterm=NONE ctermbg=Black
+hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+"hi CursorLine cterm=NONE ctermbg=Black
 
 
 " airline
@@ -306,4 +307,3 @@ noremap ,r :redo<CR>
 
 vmap > >gv
 vmap < <gv
-
