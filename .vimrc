@@ -302,3 +302,8 @@ let g:mycomment_indent = "^*"
 
 " Map leader redo shortcut
 noremap ,r :redo<CR>
+
+
+vmap > >gv
+vmap < <gv
+
