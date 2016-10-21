@@ -292,7 +292,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 
 # Ctrl + e -> Open Vim at edit current line
