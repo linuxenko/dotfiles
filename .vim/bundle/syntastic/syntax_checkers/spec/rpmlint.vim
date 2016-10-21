@@ -1,6 +1,6 @@
 "============================================================================
-"File:        textlint.vim
-"Description: Syntax checking plugin for syntastic
+"File:        rpmlint.vim
+"Description: Syntax checking plugin for syntastic.vim
 "Maintainer:  LCD 47 <lcd047 at gmail dot com>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
@@ -10,14 +10,34 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_spec_rpmlint_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_spec_rpmlint_checker = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
+
+function! SyntaxCheckers_spec_rpmlint_GetLocList() dict
+    let makeprg = self.makeprgBuild({})
+
+    let errorformat =
+        \ '%E%f:%l: E: %m,' .
+        \ '%E%f: E: %m,' .
+        \ '%W%f:%l: W: %m,' .
+        \ '%W%f: W: %m,' .
+        \ '%-G%.%#'
+
+    return SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat })
+endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'spec',
+    \ 'name': 'rpmlint'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
 " vim: set sw=4 sts=4 et fdm=marker:

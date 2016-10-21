@@ -1,7 +1,7 @@
 "============================================================================
-"File:        textlint.vim
-"Description: Syntax checking plugin for syntastic
-"Maintainer:  LCD 47 <lcd047 at gmail dot com>
+"File:        solc.vim
+"Description: Solidity syntax checker - using solc
+"Maintainer:  Jacob Cholewa <jacob@cholewa.dk>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
 "             it and/or modify it under the terms of the Do What The Fuck You
@@ -10,14 +10,29 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_solidity_solc_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_solidity_solc_checker = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
+
+function! SyntaxCheckers_solidity_solc_GetLocList() dict
+    let makeprg = self.makeprgBuild({})
+
+    let errorformat = '%f:%l:%c: %trror: %m'
+
+    return SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat })
+endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'solidity',
+    \ 'name': 'solc'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
 " vim: set sw=4 sts=4 et fdm=marker:

@@ -1,5 +1,5 @@
 "============================================================================
-"File:        textlint.vim
+"File:        eslint.vim
 "Description: Syntax checking plugin for syntastic
 "Maintainer:  LCD 47 <lcd047 at gmail dot com>
 "License:     This program is free software. It comes without any warranty,
@@ -10,14 +10,14 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_typescript_eslint_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_typescript_eslint_checker = 1
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'typescript',
+    \ 'name': 'eslint',
+    \ 'redirect': 'javascript/eslint'})
 
 " vim: set sw=4 sts=4 et fdm=marker:

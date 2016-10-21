@@ -1,7 +1,7 @@
 "============================================================================
-"File:        textlint.vim
-"Description: Syntax checking plugin for syntastic
-"Maintainer:  LCD 47 <lcd047 at gmail dot com>
+"File:        ghdl.vim
+"Description: Syntax checking plugin for syntastic.vim
+"Maintainer:  Jan Wagner <jaydyou at janidom dot de>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
 "             it and/or modify it under the terms of the Do What The Fuck You
@@ -10,14 +10,29 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_vhdl_ghdl_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_vhdl_ghdl_checker = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
+
+function! SyntaxCheckers_vhdl_ghdl_GetLocList() dict
+    let makeprg = self.makeprgBuild({ 'args_before': '-s' })
+
+    let errorformat =  '%f:%l:%c: %m'
+
+    return SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat })
+endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'vhdl',
+    \ 'name': 'ghdl'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
 " vim: set sw=4 sts=4 et fdm=marker:

@@ -1,6 +1,6 @@
 "============================================================================
-"File:        textlint.vim
-"Description: Syntax checking plugin for syntastic
+"File:        igor.vim
+"Description: Syntax checking plugin for syntastic.vim
 "Maintainer:  LCD 47 <lcd047 at gmail dot com>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
@@ -10,14 +10,14 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_text_igor_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_text_igor_checker = 1
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'text',
+    \ 'name': 'igor',
+    \ 'redirect': 'docbk/igor'})
 
 " vim: set sw=4 sts=4 et fdm=marker:

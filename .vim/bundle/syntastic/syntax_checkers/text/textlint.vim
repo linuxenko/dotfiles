@@ -10,14 +10,33 @@
 "
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_text_textlint_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_text_textlint_checker = 1
+
+let s:save_cpo = &cpo
+set cpo&vim
+
+function! SyntaxCheckers_text_textlint_GetLocList() dict
+    let makeprg = self.makeprgBuild({ 'args_after': '-f compact' })
+
+    let errorformat =
+        \ '%f: line %l\, col %c\, %tarning - %m,' .
+        \ '%f: line %l\, col %c\, %trror - %m'
+
+    return SyntasticMake({
+        \ 'makeprg': makeprg,
+        \ 'errorformat': errorformat,
+        \ 'subtype': 'Style',
+        \ 'returns': [0, 1] })
+endfunction
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'text',
+    \ 'name': 'textlint'})
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
 
 " vim: set sw=4 sts=4 et fdm=marker:

@@ -1,23 +1,22 @@
 "============================================================================
-"File:        textlint.vim
-"Description: Syntax checking plugin for syntastic
-"Maintainer:  LCD 47 <lcd047 at gmail dot com>
+"File:        oclint.vim
+"Description: Syntax checking plugin for syntastic.vim
+"Maintainer:  "UnCO" Lin <undercooled aT lavabit com>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
 "             it and/or modify it under the terms of the Do What The Fuck You
 "             Want To Public License, Version 2, as published by Sam Hocevar.
 "             See http://sam.zoy.org/wtfpl/COPYING for more details.
-"
 "============================================================================
 
-if exists('g:loaded_syntastic_html_textlint_checker')
+if exists('g:loaded_syntastic_objcpp_oclint_checker')
     finish
 endif
-let g:loaded_syntastic_html_textlint_checker = 1
+let g:loaded_syntastic_objcpp_oclint_checker = 1
 
 call g:SyntasticRegistry.CreateAndRegisterChecker({
-    \ 'filetype': 'html',
-    \ 'name': 'textlint',
-    \ 'redirect': 'text/textlint'})
+    \ 'filetype': 'objcpp',
+    \ 'name': 'oclint',
+    \ 'redirect': 'c/oclint'})
 
 " vim: set sw=4 sts=4 et fdm=marker:
