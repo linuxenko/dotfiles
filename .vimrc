@@ -123,9 +123,8 @@ set secure
 " let &showbreak='↪ '
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
 set listchars=tab:▸\ ,trail:·
-
+set list
 
 " Bind CTRl + A to toggle NerdTree
 " SCREEN Compatibility broken with  nnoremap <C-a> :NERDTreeToggle<CR>
