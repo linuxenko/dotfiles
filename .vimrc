@@ -49,7 +49,7 @@ set ttyfast
 set binary
 set noeol
 
-" Change mapleader {{{
+" Change mapleader
 let mapleader=","
 
 " Centralize backups, swapfiles and undo history
@@ -61,7 +61,7 @@ let mapleader=","
 
 " Don’t create backups when editing files in certain directories
 " set backupskip=/tmp/*,/var/tmp/*
-" }}}
+"
 
 " Enable filetype detection test
 filetype on
@@ -73,8 +73,8 @@ syntax on
 filetype plugin indent on
 
 " Ever notice a slight lag after typing the leader key + command? This lowers  
-" the timeout.  
-set timeoutlen=500  
+" the timeout.
+set timeoutlen=500
 
 " Switch between buffers without saving  
 set hidden 
@@ -116,10 +116,12 @@ set secure
 " set modeline
 " set modelines=4
 
+" set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:•,precedes:←,extends:→  " Symbols to use for invisible characters
+" let &showbreak='↪ '
 " Show “invisible” characters
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
-set lcs=tab:▸\ ,trail:·
+"set list
+set listchars=tab:▸\ ,trail:·
 
 
 " Bind CTRl + A to toggle NerdTree
@@ -161,7 +163,8 @@ inoremap <C-S> <C-O>:update<CR>
 
 colorscheme seattle 
 " colorscheme native 
-set mouse=a
+"set mouse=a
+set mouse=n
 "set paste
 set smartindent
 set autoindent
@@ -169,11 +172,11 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-" sane tabs for python {{{
+" sane tabs for python
 " set tabstop=4
 " set shiftwidth=4
 " set softtabstop=4
-" }}}
+"
 
 " Identation binding
 nmap <C-g> :normal gg=G<CR>
@@ -233,7 +236,7 @@ let g:jsdoc_input_description = 1
 let g:jsdoc_additional_descriptions = 1
 let g:jsdoc_return = 1
 let g:jsdoc_return_type = 1
-let g:jsdoc_return_description = 1
+let g:jsdoc_return_description = 1 
 let g:jsdoc_access_descriptions = 1
 let g:jsdoc_underscore_private = 1
 " Deprecated (?)
@@ -254,8 +257,8 @@ endif
 
 " syntastic plugin configuration
 let g:syntastic_mode_map = { 'mode': 'active',
-                            \ 'active_filetypes': ['python', 'javascript'],
-                            \ 'passive_filetypes': [] }
+      \ 'active_filetypes': ['python', 'javascript'],
+      \ 'passive_filetypes': [] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -263,20 +266,9 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0 
-let g:syntastic_check_on_wq = 1 
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
-
-
-" Trigger configuration. Do not use <tab> 
-" if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 
 
 " Tex fastbuild
