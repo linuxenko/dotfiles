@@ -38,6 +38,9 @@ set novisualbell
 " no line wrapping
 " set nowrap
 
+" most important option ever
+set viminfo="NONE"
+
 " Repeat one more time for screen
 " set visualbell
 
