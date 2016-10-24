@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/sveta/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -264,14 +264,14 @@ setopt noflowcontrol
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PATH=$PATH:/home/sveta/Soft/bin
-PATH=$PATH:/home/sveta/Soft/node/bin
-export JAVA_HOME=/home/sveta/Soft/java/
-export ANDROID_HOME=/home/sveta/Soft/Android/
+PATH=$PATH:$HOME/Soft/bin
+PATH=$PATH:$HOME/Soft/node/bin
+export JAVA_HOME=$HOME/Soft/java/
+export ANDROID_HOME=$HOME/Soft/Android/
 #
 # ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/home/sveta/Soft/Android/tools:/home/sveta/Soft/Android/platform-tools:$PATH"
+export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
 
 #alias N='nautilus --no-desktop&'
 
@@ -309,4 +309,4 @@ preexec() {
 #}
 
 # added by travis gem
-[ -f /home/sveta/.travis/travis.sh ] && source /home/sveta/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
