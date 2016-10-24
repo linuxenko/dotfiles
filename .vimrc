@@ -180,6 +180,9 @@ set expandtab
 " set softtabstop=4
 "
 
+" just leave it
+map qq :exit<CR>
+
 " Identation binding
 nmap <C-g> :normal gg=G<CR>
 
