@@ -2,5 +2,6 @@
 
 
 npm i -g \
-eslint  eslint-plugin-react  http-server  jest-cli \
-mocha  node-dev  node-inspector
+eslint  eslint-plugin-react  http-server jest-cli \
+mocha  node-dev  node-inspector lessmd webpack \
+webpack-dev-server
