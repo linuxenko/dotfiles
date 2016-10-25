@@ -292,6 +292,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias gls="git log --pretty=\"format:%h %G? %aN  %s\""
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
