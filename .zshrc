@@ -23,6 +23,7 @@ export TERM=xterm-256color
 
 export EDITOR=vim
 
+export NODE_PATH=$HOME/Soft/node/lib/node_modules
 # TERM=rxvt-unicode
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
