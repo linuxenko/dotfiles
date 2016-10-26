@@ -116,8 +116,8 @@ set exrc
 set secure
 
 " Respect modeline in files
-" set modeline
-" set modelines=4
+set modeline
+set modelines=4
 
 " set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:•,precedes:←,extends:→  " Symbols to use for invisible characters
 " let &showbreak='↪ '
@@ -136,6 +136,7 @@ let NERDTreeShowHidden=1
 " " Setup default folder for NerdTree
 " autocmd VimEnter * NERDTree ~/Projects
 "
+
 " " Ctrl + left arrow switch to prev tab 
 " " (yeah yeah, one file per tab's a bad pratice blah blah blah)
 " nnoremap <C-left> :tabp<CR>
@@ -304,3 +305,16 @@ noremap ,r :redo<CR>
 
 vmap > >gv
 vmap < <gv
+
+" Save file
+nnoremap <Leader>w :w<CR>
+"Copy and paste from system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+
+" vim:set ft=vim sw=2 ts=2:
