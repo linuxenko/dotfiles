@@ -155,6 +155,11 @@ nnoremap <C-right> :bn<CR>
 nnoremap <C-down> :bw<CR>
 nnoremap <C-up> :bd<CR>
 
+inoremap <C-left> <C-O>:bp<CR>
+inoremap <C-right> <C-O>:bn<CR>
+inoremap <C-down> <C-O>:bw<CR>
+inoremap <C-up> <C-O>:bd<CR>
+
 
 if has('clipboard') && !has('gui_running')
   vnoremap <C-c> "+y 
