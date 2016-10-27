@@ -65,6 +65,11 @@ let mapleader=","
 " Don’t create backups when editing files in certain directories
 " set backupskip=/tmp/*,/var/tmp/*
 "
+set undolevels=1000
+set wildignore=*.swp,*.bak,*.pyc,*/.git/**/*,*/.hg/**/*,*/.svn/**/*
+set wildignorecase
+set wildmenu
+set wildmode=longest,full
 
 " Enable filetype detection test
 filetype on
@@ -263,7 +268,7 @@ endif
 
 " syntastic plugin configuration
 let g:syntastic_mode_map = { 'mode': 'active',
-      \ 'active_filetypes': ['python', 'javascript'],
+      \ 'active_filetypes': ['javascript'],
       \ 'passive_filetypes': [] }
 
 set statusline+=%#warningmsg#
@@ -275,6 +280,14 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
+
+let g:syntastic_auto_jump               = 1
+
+"  let g:syntastic_ruby_checkers           = ['rubylint' ] " gem install ruby-lint
+"  let g:syntastic_haml_checkers           = ['haml-lint'] " gem install haml-lint
+"  let g:syntastic_scss_checkers           = ['scss_lint'] " gem install scss-lint
+"  let g:syntastic_css_checkers            = ['csslint'  ] " sudo npm install -g csslint
+"  let g:syntastic_css_csslint_args = "--ignore=zero-units"
 
 
 " Tex fastbuild
@@ -316,5 +329,11 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
+map  <Insert> <Nop>
+imap <Insert> <Nop>
 
+map <Space> <Leader>
+
+imap <F1> <Esc>
+map <F6> :setlocal spell! spelllang=en,ru<CR>
 " vim:set ft=vim sw=2 ts=2:
