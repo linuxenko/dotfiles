@@ -336,4 +336,10 @@ map <Space> <Leader>
 
 imap <F1> <Esc>
 map <F6> :setlocal spell! spelllang=en,ru<CR>
+
+if bufwinnr(1)
+  nnoremap < <C-W><
+  nnoremap > <C-W>>
+endif
+
 " vim:set ft=vim sw=2 ts=2:
