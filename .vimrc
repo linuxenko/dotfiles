@@ -80,23 +80,21 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" Ever notice a slight lag after typing the leader key + command? This lowers  
+" Ever notice a slight lag after typing the leader key + command? This lowers
 " the timeout.
 set timeoutlen=500
 
-" Switch between buffers without saving  
+" Switch between buffers without saving
 set hidden 
 
 " Automatically save file when switching the buffer
 " set autowriteall
 
-" Always show the status line  
+" Always show the status line
 set laststatus=2
 
-
 " Autocompletion (Ctrl+N) config
-set complete=.,w
-
+set complete=.,w,b,t
 
 " Show command in bottom right portion of the screen  
 set showcmd
@@ -345,6 +343,8 @@ map <F6> :setlocal spell! spelllang=en,ru<CR>
 if bufwinnr(1)
   nnoremap < <C-W><
   nnoremap > <C-W>>
+  nnoremap + <C-W>+
+  nnoremap - <C-W>-
 endif
 
 " vim:set ft=vim sw=2 ts=2:
