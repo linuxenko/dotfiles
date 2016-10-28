@@ -20,7 +20,7 @@ font pango:monospace 8
 #client.unfocused        #111111 #111111 #888888 #111111 
 #client.urgent           #C10004 #900000 #ffffff #900000
 
-client.focused          #444444 #8a8a8a #444444 #444444
+client.focused          #444444 #664477 #dddddd #444444
 client.focused_inactive #000000 #000000 #000000 #000000
 client.unfocused        #000000 #000000 #000000 #000000
 client.urgent           #000000 #000000 #000000 #000000
