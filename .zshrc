@@ -86,9 +86,9 @@ bindkey -v
 #bindkey 'g' end-of-line
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=100
-SAVEHIST=0
-HISTFILE=/dev/null
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
 
 setopt histignorealldups 
@@ -312,3 +312,5 @@ preexec() {
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+
