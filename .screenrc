@@ -17,7 +17,6 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
 autodetach on
 hardstatus alwayslastline
-caption always ''
 hardstatus string '%{= G}%= %{= B}%?%-w%{= g}%n-%t%{= g}%?%{= B}%+w %= %{= g}%{B}%D %d %c %{g}'
 
 rendition so "="
