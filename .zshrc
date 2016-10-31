@@ -67,7 +67,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm vi-mode colored-man-pages dirhistory docker fancy-ctrl-z last-working-dir systemd z)
+plugins=(git npm zsh-autosuggestions vi-mode colored-man-pages dirhistory docker fancy-ctrl-z last-working-dir systemd z)
 
 source $ZSH/oh-my-zsh.sh
 
