@@ -15,8 +15,10 @@ defbce "on"
 termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 
-caption always '%{= G}%= %{= B}%?%-w%{= g}%n-%t%{= g}%?%{= B}%+w %= %{= g}%{B}%D %d %c %{g}'
-
+autodetach on
+hardstatus alwayslastline
+caption always ''
+hardstatus string '%{= G}%= %{= B}%?%-w%{= g}%n-%t%{= g}%?%{= B}%+w %= %{= g}%{B}%D %d %c %{g}'
 
 rendition so "="
 
