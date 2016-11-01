@@ -29,6 +29,7 @@ set smartcase
 set number
 " " Enable backspace normal behavior
 set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 " " Disable swap file generation
 set noswapfile
 " No annoying sound on errors
@@ -37,6 +38,11 @@ set novisualbell
 
 " no line wrapping
 " set nowrap
+
+" Show matching brackets when text indicator is over them
+set showmatch
+" How many tenths of a second to blink when matching brackets
+set mat=2
 
 " most important option ever
 set viminfo="NONE"
@@ -90,6 +96,9 @@ set hidden
 " Automatically save file when switching the buffer
 " set autowriteall
 
+" Add a bit extra margin to the left
+" set foldcolumn=0
+
 " Always show the status line
 set laststatus=2
 
@@ -129,12 +138,17 @@ set modelines=4
 set listchars=tab:▸\ ,trail:·
 set list
 
-" Bind CTRl + A to toggle NerdTree
-" SCREEN Compatibility broken with  nnoremap <C-a> :NERDTreeToggle<CR>
-nnoremap <C-e> :NERDTreeToggle<CR>
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
 
 " Show hidden files in NerdTree  
 let NERDTreeShowHidden=1
+
+
+"let g:NERDTreeWinPos = "right"
+"let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+"let g:NERDTreeWinSize=35
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " " Setup default folder for NerdTree
 " autocmd VimEnter * NERDTree ~/Projects
@@ -322,8 +336,11 @@ noremap ,r :redo<CR>
 vmap > >gv
 vmap < <gv
 
-" Save file
-nnoremap <Leader>w :w<CR>
+" Fast operations
+nmap <leader>w :w!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>x :x!<cr>
+
 "Copy and paste from system clipboard
 vmap <Leader>y "+y
 vmap <Leader>d "+d
@@ -334,6 +351,22 @@ vmap <Leader>P "+P
 
 map  <Insert> <Nop>
 imap <Insert> <Nop>
+vmap <Insert> <Nop>
+cmap <Insert> <Nop>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+
+" Undotree
+nnoremap <leader>u :UndotreeToggle<cr>
+
+" NerdTree
+nnoremap <leader>e :NERDTreeToggle<cr>
+nnoremap <C-e> :NERDTreeToggle<cr>
 
 map <Space> <Leader>
 
