@@ -89,6 +89,7 @@ filetype plugin indent on
 " Ever notice a slight lag after typing the leader key + command? This lowers
 " the timeout.
 set timeoutlen=500
+set ttimeoutlen=0
 
 " Switch between buffers without saving
 set hidden 
@@ -351,7 +352,6 @@ function! s:goyo_enter()
   set noshowmode
   set noshowcmd
   set scrolloff=999
-  Limelight
   hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 endfunction
 
@@ -370,11 +370,30 @@ let g:goyo_width=90
 let g:goyo_height=90
 let g:goyo_linenr=0
 
+" Limelight
+function! LimelightToggle()
+  if g:limelight_isVisible == 1
+    let g:limelight_isVisible = 0
+    execute "Limelight!"
+  else
+    let g:limelight_isVisible = 1
+    execute "Limelight"
+  endif
+endfunction
+
+let g:limelight_isVisible = 0
+
+let g:limelight_default_coefficient = 0.7
+
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 2
+
 " Map Goyo toggle
 nmap <leader>g :Goyo<cr>
+nmap <leader>gg :call LimelightToggle()<cr>
 
 " Map leader redo shortcut
-noremap ,r :redo<CR>
+noremap <leader>r :redo<CR>
 
 
 vmap > >gv
