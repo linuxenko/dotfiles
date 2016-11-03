@@ -345,6 +345,34 @@ noremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
 let g:mycomment_indent = "^*"
 
 
+" Goyo
+
+function! s:goyo_enter()
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+  hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+endfunction
+
+function! s:goyo_leave()
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+let g:goyo_width=90
+let g:goyo_height=90
+let g:goyo_linenr=0
+
+" Map Goyo toggle
+nmap <leader>g :Goyo<cr>
+
 " Map leader redo shortcut
 noremap ,r :redo<CR>
 
