@@ -392,6 +392,13 @@ let g:limelight_paragraph_span = 2
 nmap <leader>g :Goyo<cr>
 nmap <leader>gg :call LimelightToggle()<cr>
 
+
+" Emmet
+"let g:user_emmet_leader_key = '<C-leader>'
+let g:user_emmet_expandabbr_key = '<Tab>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 " Map leader redo shortcut
 noremap <leader>r :redo<CR>
 
