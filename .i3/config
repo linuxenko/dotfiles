@@ -68,10 +68,10 @@ bindsym Mod4+Shift+a exec "pavucontrol"
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $up k 
+set $down j
+set $left h
+set $right l
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
@@ -214,14 +214,9 @@ bindsym Mod4+r mode "resize"
 floating_maximum_size 1900 x 1000
 floating_minimum_size 480 x 240 
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#	font pango:DejaVu Sans Mono 10 
-#        status_command i3status -c ~/.i3/i3status.conf 
-#	position top
-#        tray_output primary
-#}
+# Window assignments
+
+#assign [class="(?i)thunderbird] workspace 3
 
 #for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] border pixel 1
