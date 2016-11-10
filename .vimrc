@@ -88,7 +88,7 @@ filetype plugin indent on
 
 " Ever notice a slight lag after typing the leader key + command? This lowers
 " the timeout.
-set timeoutlen=500
+set timeoutlen=1200
 set ttimeoutlen=0
 
 " Switch between buffers without saving
@@ -167,6 +167,12 @@ nnoremap <C-left> :bp<CR>
 nnoremap <C-right> :bn<CR>
 nnoremap <C-down> :bw<CR>
 nnoremap <C-up> :bd<CR>
+
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+inoremap <C-h> <C-O>:bp<CR>
+inoremap <C-l> <C-O>:bn<CR>
+
 
 inoremap <C-left> <C-O>:bp<CR>
 inoremap <C-right> <C-O>:bn<CR>
@@ -299,7 +305,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
-let g:syntastic_auto_jump               = 1
+let g:syntastic_auto_jump               = 0 
 
 "  let g:syntastic_ruby_checkers           = ['rubylint' ] " gem install ruby-lint
 "  let g:syntastic_haml_checkers           = ['haml-lint'] " gem install haml-lint
@@ -345,54 +351,6 @@ noremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
 
 let g:mycomment_indent = "^*"
 
-
-" Goyo
-
-function! s:goyo_enter()
-  set noshowmode
-  set noshowcmd
-  set scrolloff=999
-  hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-endfunction
-
-function! s:goyo_leave()
-  set showmode
-  set showcmd
-  set scrolloff=5
-  Limelight!
-  hi CursorLine ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
-endfunction
-
-autocmd! User GoyoEnter nested call <SID>goyo_enter()
-autocmd! User GoyoLeave nested call <SID>goyo_leave()
-
-let g:goyo_width=90
-let g:goyo_height=90
-let g:goyo_linenr=0
-
-" Limelight
-function! LimelightToggle()
-  if g:limelight_isVisible == 1
-    let g:limelight_isVisible = 0
-    execute "Limelight!"
-  else
-    let g:limelight_isVisible = 1
-    execute "Limelight"
-  endif
-endfunction
-
-let g:limelight_isVisible = 0
-
-let g:limelight_default_coefficient = 0.7
-
-" Number of preceding/following paragraphs to include (default: 0)
-let g:limelight_paragraph_span = 2
-
-" Map Goyo toggle
-nmap <leader>g :Goyo<cr>
-nmap <leader>gg :call LimelightToggle()<cr>
-
-
 " Emmet
 "let g:user_emmet_leader_key = '<C-leader>'
 let g:user_emmet_expandabbr_key = '<Tab>'
@@ -425,10 +383,10 @@ vmap <Insert> <Nop>
 cmap <Insert> <Nop>
 
 " Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+"map <C-j> <C-W>j
+"map <C-k> <C-W>k
+"map <C-h> <C-W>h
+"map <C-l> <C-W>l
 
 
 " Undotree
