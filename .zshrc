@@ -309,6 +309,8 @@ preexec() {
 #premd() {
 #    [ -n "$WINDOW" ] && screen -X title '' 
 #}
+#
+[ -f $HOME/.misc_exports ] && source $HOME/.misc_exports
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
