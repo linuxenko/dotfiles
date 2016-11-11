@@ -24,3 +24,9 @@ git clone https://aur.archlinux.org/i3-gaps-git.git
 
 makepkg -sri
 
+
+## lightdm greater tip
+# gsettings set com.canonical.unity-greeter play-ready-sound false
+sudo vi /usr/share/glib-2.0/schemas/50_unity-greeter.gschema.override
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+
