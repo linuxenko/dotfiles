@@ -163,10 +163,10 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 
 " Bind buffers
 
-nnoremap <C-left> :bp<CR>
-nnoremap <C-right> :bn<CR>
-nnoremap <C-down> :bw<CR>
-nnoremap <C-up> :bd<CR>
+"nnoremap <C-left> :bp<CR>
+"nnoremap <C-right> :bn<CR>
+"nnoremap <C-down> :bw<CR>
+"nnoremap <C-up> :bd<CR>
 
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
@@ -174,10 +174,10 @@ inoremap <C-h> <C-O>:bp<CR>
 inoremap <C-l> <C-O>:bn<CR>
 
 
-inoremap <C-left> <C-O>:bp<CR>
-inoremap <C-right> <C-O>:bn<CR>
-inoremap <C-down> <C-O>:bw<CR>
-inoremap <C-up> <C-O>:bd<CR>
+"inoremap <C-left> <C-O>:bp<CR>
+"inoremap <C-right> <C-O>:bn<CR>
+"inoremap <C-down> <C-O>:bw<CR>
+"inoremap <C-up> <C-O>:bd<CR>
 
 
 if has('clipboard') && !has('gui_running')
@@ -355,10 +355,13 @@ let g:mycomment_indent = "^*"
 "let g:user_emmet_leader_key = '<C-leader>'
 let g:user_emmet_expandabbr_key = '<Tab>'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,javascript.jsx EmmetInstall
+
+" Switch between last two buffers
+nnoremap ,, <C-^>
 
 " Map leader redo shortcut
-noremap <leader>r :redo<CR>
+nnoremap <leader>r :redo<CR>
 
 
 vmap > >gv
@@ -370,12 +373,12 @@ nmap <leader>q :q!<cr>
 nmap <leader>x :x!<cr>
 
 "Copy and paste from system clipboard
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
+"vmap <Leader>y "+y
+"vmap <Leader>d "+d
+"nmap <Leader>p "+p
+"nmap <Leader>P "+P
+"vmap <Leader>p "+p
+"vmap <Leader>P "+P
 
 map  <Insert> <Nop>
 imap <Insert> <Nop>
@@ -399,6 +402,7 @@ nnoremap <C-e> :NERDTreeToggle<cr>
 map <Space> <Leader>
 
 imap <F1> <Esc>
+imap jj <Esc>
 map <F6> :setlocal spell! spelllang=en,ru<CR>
 
 if bufwinnr(1)
@@ -408,4 +412,14 @@ if bufwinnr(1)
   nnoremap - <C-W>-
 endif
 
+
+" Disable arrow keys (hardcore)
+map  <up>    <nop>
+imap <up>    <nop>
+map  <down>  <nop>
+imap <down>  <nop>
+map  <left>  <nop>
+imap <left>  <nop>
+map  <right> <nop>
+imap <right> <nop>
 " vim:set ft=vim sw=2 ts=2:
