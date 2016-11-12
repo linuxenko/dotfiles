@@ -282,11 +282,11 @@ nmap <silent> <leader>l <Plug>(jsdoc)
 
 
 " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.  
-if has("autocmd")  
-  augroup myvimrchooks  
-    au!  
-    autocmd bufwritepost .vimrc source ~/.vimrc  
-  augroup END  
+if has("autocmd")
+  augroup myvimrchooks
+    au!
+    autocmd bufwritepost .vimrc source ~/.vimrc
+  augroup END
 endif
 
 
@@ -352,10 +352,12 @@ noremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
 let g:mycomment_indent = "^*"
 
 " Emmet
-"let g:user_emmet_leader_key = '<C-leader>'
-let g:user_emmet_expandabbr_key = '<Tab>'
+" let g:user_emmet_leader_key = '<C-leader>'
+"let g:user_emmet_expandabbr_key = '<Tab>'
 let g:user_emmet_install_global = 0
 autocmd FileType html,css,javascript.jsx EmmetInstall
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Switch between last two buffers
 nnoremap ,, <C-^>
@@ -422,4 +424,5 @@ map  <left>  <nop>
 imap <left>  <nop>
 map  <right> <nop>
 imap <right> <nop>
+
 " vim:set ft=vim sw=2 ts=2:
