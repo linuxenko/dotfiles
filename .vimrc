@@ -142,12 +142,11 @@ set list
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Show hidden files in NerdTree  
+" Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
-
 "let g:NERDTreeWinPos = "right"
-"let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 "let g:NERDTreeWinSize=35
 let g:nerdtree_tabs_open_on_gui_startup=0
 
@@ -304,6 +303,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_pylint_args = '-E'
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_pylint_exec = 'pylint3'
+let g:syntastic_python_checkers = ['pylint']
 
 let g:syntastic_auto_jump               = 0 
 
