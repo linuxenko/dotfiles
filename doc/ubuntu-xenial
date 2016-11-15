@@ -1,0 +1,17 @@
+git clone git://kernel.ubuntu.com/ubuntu/ubuntu-xenial.git
+
+chmod a+x debian/rules
+chmod a+x debian/scripts/*
+chmod a+x debian/scripts/misc/*
+fakeroot debian/rules clean
+# quicker build:
+fakeroot debian/rules binary-headers binary-generic
+# if you need linux-tools or lowlatency kernel, run instead:
+fakeroot debian/rules binary
+
+
+fakeroot debian/rules editconfigs%
+
+
+
+
