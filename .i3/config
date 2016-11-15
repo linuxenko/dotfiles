@@ -257,4 +257,4 @@ exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id compton --config ~/.i3/compton.conf -cGb
 exec --no-startup-id setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
 exec --no-startup-id feh --bg-fill ~/Pics/Louis_Wain_The_bachelor_party.jpg
-exec --no-startup-id xmodmap -e 'clear Lock' -e 'keycode 66 = Control_L' -e 'add Control = Control_L'
+exec --no-startup-id sleep 2 && xmodmap -e 'clear Lock' -e 'keycode 66 = Control_L' -e 'add Control = Control_L'
