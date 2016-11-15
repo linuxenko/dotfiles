@@ -160,18 +160,6 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 " " Ctrl + right arrow switch to next tab
 " nnoremap <C-right> :tabn<CR>
 
-" Bind buffers
-
-"nnoremap <C-left> :bp<CR>
-"nnoremap <C-right> :bn<CR>
-"nnoremap <C-down> :bw<CR>
-"nnoremap <C-up> :bd<CR>
-
-nnoremap <C-h> :bp<CR>
-nnoremap <C-l> :bn<CR>
-inoremap <C-h> <C-O>:bp<CR>
-inoremap <C-l> <C-O>:bn<CR>
-
 
 "inoremap <C-left> <C-O>:bp<CR>
 "inoremap <C-right> <C-O>:bn<CR>
@@ -427,5 +415,20 @@ map  <left>  <nop>
 imap <left>  <nop>
 map  <right> <nop>
 imap <right> <nop>
+
+" Bind buffers
+
+"nnoremap <C-left> :bp<CR>
+"nnoremap <C-right> :bn<CR>
+"nnoremap <C-down> :bw<CR>
+"nnoremap <C-up> :bd<CR>
+
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+inoremap <C-h> <C-O>:bp<CR>
+inoremap <C-l> <C-O>:bn<CR>
+
+nnoremap <c-x> :bd<cr>
+inoremap <c-x> <c-o>:bd<cr>
 
 " vim:set ft=vim sw=2 ts=2:
