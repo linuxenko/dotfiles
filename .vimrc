@@ -425,8 +425,8 @@ imap <right> <nop>
 
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
-inoremap <C-h> <C-O>:bp<CR>
-inoremap <C-l> <C-O>:bn<CR>
+inoremap <C-h> <C-O>:bp<CR><esc>
+inoremap <C-l> <C-O>:bn<CR><esc>
 
 nnoremap <c-x> :bd<cr>
 inoremap <c-x> <c-o>:bd<cr>
