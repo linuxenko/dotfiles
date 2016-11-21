@@ -175,9 +175,9 @@ if has('clipboard') && !has('gui_running')
 endif
 
 " Use CTRL-S for saving, also in Insert mode
-noremap <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
+noremap <C-S> :update<CR><esc>
+vnoremap <C-S> <C-C>:update<CR><esc>
+inoremap <C-S> <C-O>:update<CR><esc>
 
 
 colorscheme seattle 
