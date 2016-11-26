@@ -56,6 +56,7 @@ set esckeys
 set ttyfast
 " Don’t add empty newlines at the end of files
 set binary
+" Don’t add empty newlines at the end of files
 set noeol
 
 " Change mapleader
@@ -215,7 +216,12 @@ set foldnestmax=10      "deepest fold is 10 levels
 
 " Maximum width of text that is being inserted.  A longer line will be
 " broken after white space to get this width.
-" set textwidth=80
+" Line width
+"set textwidth=80
+" do not wrap automatically on load
+set nowrap
+" do not wrap automatically when typing
+set fo-=t
 set colorcolumn=80
 
 
