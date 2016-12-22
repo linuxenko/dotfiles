@@ -219,7 +219,8 @@ set foldnestmax=10      "deepest fold is 10 levels
 " Line width
 "set textwidth=80
 " do not wrap automatically on load
-set nowrap
+"set nowrap
+set wrap
 " do not wrap automatically when typing
 set fo-=t
 set colorcolumn=80
@@ -391,10 +392,6 @@ cmap <Insert> <Nop>
 "map <C-k> <C-W>k
 "map <C-h> <C-W>h
 "map <C-l> <C-W>l
-
-
-" Undotree
-nnoremap <leader>u :UndotreeToggle<cr>
 
 " NerdTree
 nnoremap <leader>e :NERDTreeToggle<cr>
