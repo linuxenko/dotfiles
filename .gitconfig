@@ -28,3 +28,5 @@
   gpgsign = true
 [gpg]
   program = gpg2
+[http]
+  postBuffer = 1048576000
