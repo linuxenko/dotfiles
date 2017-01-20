@@ -353,11 +353,11 @@ let g:mycomment_indent = "^*"
 
 " Emmet
 " let g:user_emmet_leader_key = '<C-leader>'
-"let g:user_emmet_expandabbr_key = '<Tab>'
-let g:user_emmet_install_global = 0
-autocmd FileType html,css,javascript.jsx EmmetInstall
-let g:user_emmet_expandabbr_key='<Tab>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" let g:user_emmet_expandabbr_key = '<Tab>'
+" let g:user_emmet_install_global = 0
+" autocmd FileType html EmmetInstall
+" let g:user_emmet_expandabbr_key='<Tab>'
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Switch between last two buffers
 nnoremap ,, <C-^>
