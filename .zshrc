@@ -276,13 +276,13 @@ export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
 
 #alias N='nautilus --no-desktop&'
 
-
 alias e='vim'
 
 # git
 alias cm='git commit -a'
 alias push='git push origin'
 alias pull='git pull origin'
+alias gls='git log --oneline --color --graph --decorate --all'
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
