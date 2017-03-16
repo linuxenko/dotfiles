@@ -24,7 +24,7 @@ set vicmd=vim
 " I recommend not changing this until you are familiar with vifm.
 " This probably shouldn't be an option.
 
-set trash
+set notrash
 
 " This is how many directories to store in the directory history.
 
