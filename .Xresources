@@ -2,13 +2,14 @@
 
 xterm*utf8: true
 xterm*faceName: xft:bitstream vera sans mono:pixelsize=14:antialias=true
+!xterm*faceName: xft:bitstream vera sans mono:pixelsize=14:antialias=true
 xterm*faceNameDoublesize: xft:bitstream vera sans monopixelsize=14:antialias=true
 !xterm*faceName: xft:DejaVu Sans Mono:style=Book:pixelsize=14:antialias=true
 !xterm*faceNameDoublesize: xft:bitstream vera sans monopixelsize=14:antialias=true
 
 !xterm*faceSize: 10 
 xterm*borderWidth: 0
-XTerm*internalBorder: 0
+XTerm*internalBorder: 2
 
 xterm*scaleHeight: 1.01
 
