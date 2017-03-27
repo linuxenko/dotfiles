@@ -91,7 +91,7 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 
-setopt histignorealldups 
+setopt histignorealldups
 setopt histignorespace
 #setopt sharehistory
 
@@ -277,6 +277,8 @@ export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
 #alias N='nautilus --no-desktop&'
 
 alias e='vim'
+
+alias t1='tmuxinator start editor1'
 
 # git
 alias cm='git commit -a'

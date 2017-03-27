@@ -1,0 +1,10 @@
+name: editor1
+
+windows:
+  - editor:
+      layout: 1ca6,239x63,0,0{179x63,0,0,0,59x63,180,0[59x34,180,0,1,59x13,180,35,2,59x14,180,49,3]}
+      panes:
+        - vim
+        - #
+        - #
+        - tty-clock -c
