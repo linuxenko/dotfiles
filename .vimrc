@@ -347,7 +347,7 @@ vnoremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
 noremap ,m :update<CR>:call MKTex()<CR>:redraw<CR>
 
 
-" Mycomment indent 
+" Mycomment indent
 
 let g:mycomment_indent = "^*"
 
@@ -358,6 +358,17 @@ let g:mycomment_indent = "^*"
 " autocmd FileType html EmmetInstall
 " let g:user_emmet_expandabbr_key='<Tab>'
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
+" Jedi
+"let g:jedi#auto_initialization = 0
+"let g:jedi#auto_vim_configuration = 0
+"let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#use_splits_not_buffers = "left"
+let g:jedi#popup_on_dot = 0
+
+" disable documentation popup
+autocmd FileType python setlocal completeopt-=preview
+
 
 " Switch between last two buffers
 nnoremap ,, <C-^>
