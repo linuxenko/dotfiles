@@ -273,6 +273,7 @@ export ANDROID_HOME=$HOME/Soft/Android/
 # ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 #alias N='nautilus --no-desktop&'
 
@@ -293,6 +294,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+alias gg="xhost +; sudo su - gg"
 
 alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 # IP addresses
@@ -318,3 +320,9 @@ preexec() {
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/sveta/Soft/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/completion.zsh.inc'; fi
