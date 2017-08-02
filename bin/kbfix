@@ -1,3 +1,4 @@
 #!/bin/sh
 
 setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
+xmodmap -e 'clear Lock' -e 'keycode 66 = Control_L' -e 'add Control = Control_L'
