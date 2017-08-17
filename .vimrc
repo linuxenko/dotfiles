@@ -303,9 +303,12 @@ let g:syntastic_riot_checkers = ['eslint']
 let g:syntastic_python_pylint_args = '-E'
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_pylint_exec = 'pylint3'
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint3']
 
 let g:syntastic_auto_jump               = 0
+
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 "  let g:syntastic_ruby_checkers           = ['rubylint' ] " gem install ruby-lint
 "  let g:syntastic_haml_checkers           = ['haml-lint'] " gem install haml-lint
@@ -363,8 +366,12 @@ let g:mycomment_indent = "^*"
 "let g:jedi#auto_initialization = 0
 "let g:jedi#auto_vim_configuration = 0
 "let g:jedi#use_tabs_not_buffers = 1
-let g:jedi#use_splits_not_buffers = "left"
-let g:jedi#popup_on_dot = 0
+"let g:jedi#use_splits_not_buffers = "left"
+"let g:jedi#popup_on_dot = 0
+
+" YouCompleteMe
+"let g:ycm_python_binary_path = '/usr/bin/python3'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
 
 " disable documentation popup
 autocmd FileType python setlocal completeopt-=preview
