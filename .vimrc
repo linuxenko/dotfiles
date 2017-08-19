@@ -370,8 +370,9 @@ let g:mycomment_indent = "^*"
 "let g:jedi#popup_on_dot = 0
 
 " YouCompleteMe
-"let g:ycm_python_binary_path = '/usr/bin/python3'
-"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+" let g:ycm_python_binary_path = '/usr/bin/python3'
+" let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" let g:ycm_global_ycm_extra_conf = '.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 " disable documentation popup
 autocmd FileType python setlocal completeopt-=preview
