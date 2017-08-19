@@ -19,7 +19,7 @@ export LANG=en_US.UTF-8
 
 
 #export TERM=xterm-256color
-export TERM=screen-256color
+export TERM=screen-256color-s
 
 export EDITOR=vim
 
@@ -67,7 +67,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm zsh-autosuggestions vi-mode colored-man-pages dirhistory docker fancy-ctrl-z last-working-dir systemd z)
+plugins=(git zsh-autosuggestions vi-mode colored-man-pages fancy-ctrl-z last-working-dir z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,8 +86,8 @@ bindkey -v
 #bindkey 'g' end-of-line
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 HISTFILE=~/.zsh_history
 
 
@@ -322,7 +322,7 @@ preexec() {
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/sveta/Soft/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/home/sveta/Soft/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/completion.zsh.inc'; fi
