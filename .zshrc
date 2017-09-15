@@ -274,6 +274,7 @@ export ANDROID_HOME=$HOME/Soft/Android/
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 #alias N='nautilus --no-desktop&'
 
