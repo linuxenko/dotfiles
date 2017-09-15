@@ -2,6 +2,7 @@
   name = Svetlana Linuxenko
   email = svetlana@linuxenko.pro
   signingkey = FA491208
+
 [push]
   default = current
 
@@ -26,8 +27,10 @@
 
 [commit]
   gpgsign = true
+
 [gpg]
   program = gpg2
+
 [http]
   postBuffer = 157286400
   TIMEOUTclose = 0
