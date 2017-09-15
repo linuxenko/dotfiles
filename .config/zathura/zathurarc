@@ -1,0 +1,38 @@
+
+set pages-per-row 1
+
+set font                        "Bitstream mono 12"
+#set default-bg                  "#1a1829" #00
+#set default-fg                  "#ac9b9d" #01
+set default-bg                  "#444444" #00
+set default-fg                  "#cccccc" #01
+
+set statusbar-fg                "#717557" #04
+set statusbar-bg                "#151515"  #01
+
+set inputbar-bg                 "#1a1829" #00 currently not used
+set inputbar-fg                 "#7a961" #02
+
+set notification-error-bg       "#717557" #08
+set notification-error-fg       "#151515" #00
+
+set notification-warning-bg     "#717557" #08
+set notification-warning-fg     "#151515" #00
+
+set highlight-color             "#7a961b" #0A
+set highlight-active-color      "#7c9d7c" #0D
+
+set completion-highlight-fg     "#ac9b9d" #02
+set completion-highlight-bg     "#534475" #0C
+
+set completion-bg               "#7a961b" #02
+set completion-fg               "#7a961c" #0C
+
+set notification-bg             "#ffad19" #0B
+set notification-fg             "#151515" #00
+
+set recolor-lightcolor          "#222222" #00
+set recolor-darkcolor           "#cccccc" #06
+
+set recolor                     "true"
+#set recolor-keephue             "true"
