@@ -1,0 +1,126 @@
+set realname = "Svetlana Linuxenko"
+
+# SMTP
+set smtp_url  ="smtp://sveta@10.8.0.1:587/"
+set smtp_pass ="****"
+
+# IMAP
+set from         = "sveta@linuxenko.pro"
+set imap_user    = "sveta"
+set imap_pass    = "****"
+set folder = "imaps://10.8.0.1:993/"
+#set record=+INBOX
+set spoolfile="+INBOX"
+#set imap_check_subscribed
+
+set header_cache = "~/.mutt/cache"
+
+mailboxes ="INBOX" ="Archive" ="Drafts" ="Files" ="Notes" ="Sent" ="Server" ="Subscriptions" ="Test" ="Trash"
+
+# Common
+set sort=threads
+set sort_browser=date
+set sort_aux=reverse-last-date-received
+
+set editor="vim"
+set edit_headers # See the headers when editing
+set autoedit     # Go straight to editing; don't prompt for recipients
+set forward_format="Fwd: %s"    # traditional Fwd: subject
+set attribution="On %{\%a, %d %b %Y %H:%M:%S %z}, %n wrote:"
+
+set sidebar_width=30
+set sidebar_visible=yes
+set sidebar_delim_chars = '/'
+
+color sidebar_new yellow default
+
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+bind index l display-message
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
+
+set status_format=" %r %b %f %n      Del %d      Msgs %m %l %%> (%P)"
+set pager_format="[%4C/%4m] (%S%Z) %%=%N $i %%> [%lL]"
+set date_format="!%H:%M %a %d %b     "
+set index_format="%4C %Z %[%b%d] %-15.15F %s"
+set folder_format="%2C %t %8s %d %N %f"
+
+set record=''
+set copy=no
+set include=yes                         #quote msg in reply
+set fast_reply=yes                      #no prompting on reply
+set beep=no                             #no noise
+set markers=no                          #no + on wrapped lines
+set to_chars=" +TCF"                    #no L for mail_list
+
+#save-hook .* ~/keep                      #default mbox to (s)ave mail is ~/keep
+
+bind pager h      display-toggle-weed   #toggle headers with h key
+bind pager <Up>   previous-line
+bind pager <Down> next-line
+
+# Render HTML email
+auto_view text/html
+alternative_order text/plain text/enriched text/html text image/*
+
+# Colorize diffs.
+set allow_ansi
+auto_view text/x-diff
+auto_view text/x-patch
+color body brightred    black "^-.*"
+color body brightgreen  black "^[+].*"
+color body brightwhite  black "^diff --git.*"
+color body brightwhite  black "^index [a-f0-9].*"
+color body brightyellow black "^@@.*"
+
+# default list of header fields to weed out when displaying mail
+#ignore them all and then unignore what you want to see
+ignore *
+unignore  Date To Cc Bcc From Subject X-Mailer Organization User-Agent Message-ID
+hdr_order Date From To Cc Bcc X-Mailer User-Agent Organization Message-ID Subject
+
+##your Mutt has to have some colors
+color quoted     green         black
+color quoted1    magenta       blue
+color quoted2    yellow        black
+color quoted3    red           black
+color signature  cyan          cyan
+
+color hdrdefault brightcyan    black
+color header     brightwhite   black "^from:"
+color header     brightwhite   black "^subject:"
+
+color quoted     brightgreen   black
+color signature  brightwhite   black
+
+color indicator  black         blue
+
+color error      red           black
+mono  error      bold
+color status     black         cyan
+mono  status     bold
+color tree       green         black
+
+color tilde      brightmagenta black
+color body       brightwhite   black "[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono  body       bold                "[-a-z_0-9.]+@[-a-z_0-9.]+"
+color body       brightyellow  black "^Good signature"
+mono  body       bold                "^Good signature"
+color body       brightwhite   red   "^Bad signature from.*"
+mono  body       bold                "^Bad signature from.*"
+color normal     white         black
+color message    green         black
+color attachment black         blue
+
+color  body      brightgreen     default "^gpg: Good signature .*"
+color  body      white           default "^gpg: "
+color  body      brightwhite     red     "^gpg: BAD signature from.*"
+
+color index      brightyellow  black ~N # New
+color index      yellow        black ~O # Old
+color index      magenta       black ~F # Flagged
+color index      blue          black ~T # Tagged
+color index      red           black ~D # Deleted
+color index      white         black ~R # Read
