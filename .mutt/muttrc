@@ -1,19 +1,22 @@
-set realname = "Svetlana Linuxenko"
+set realname = "--"
 
 # SMTP
-set smtp_url  ="smtp://sveta@10.8.0.1:587/"
-set smtp_pass ="****"
+set smtp_url="--"
+set smtp_pass="--"
 
 # IMAP
-set from         = "sveta@linuxenko.pro"
-set imap_user    = "sveta"
-set imap_pass    = "****"
-set folder = "imaps://10.8.0.1:993/"
+set from         = "--"
+set imap_user         = "--"
+set imap_pass = "--"
+set folder = "--"
 #set record=+INBOX
 set spoolfile="+INBOX"
 #set imap_check_subscribed
 
 set header_cache = "~/.mutt/cache"
+set timeout=30
+set signature="~/.mutt/signature.txt"
+#set new_mail_command="notify-send 'New Email' '%n new messages, %u unread.' &"
 
 mailboxes ="INBOX" ="Archive" ="Drafts" ="Files" ="Notes" ="Sent" ="Server" ="Subscriptions" ="Test" ="Trash"
 
