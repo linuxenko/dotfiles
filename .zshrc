@@ -22,6 +22,7 @@ export LANG=en_US.UTF-8
 export TERM=screen-256color-s
 
 export EDITOR=vim
+export BROWSER=w3m
 
 export NODE_PATH=$HOME/Soft/node/lib/node_modules
 # TERM=rxvt-unicode
