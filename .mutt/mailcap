@@ -10,4 +10,7 @@ application/msword; /usr/bin/xdg-open %s
 application/pdf; /usr/bin/xdg-open %s
 application/postscript ; /usr/bin/xdg-open %s
 
-text/html;      w3m -dump %s; nametemplate=%s.html; copiousoutput
+#text/html; /usr/bin/xdg-open %s ; copiousoutput
+#text/html;      w3m -dump %s; nametemplate=%s.html; copiousoutput
+#text/html; w3m -cols ${COLUMNS:-80} -I %{charset} -T text/html; copiousoutput
+text/html; lynx -display_charset=utf-8 -dump %s; nametemplate=%s.html; copiousoutput
