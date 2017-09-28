@@ -1,17 +1,16 @@
-set realname = "--"
+# set realname = "--"
 
 # SMTP
-set smtp_url="--"
-set smtp_pass="--"
-
-# IMAP
-set from         = "--"
-set imap_user         = "--"
-set imap_pass = "--"
-set folder = "--"
-#set record=+INBOX
+# set smtp_url="--"
+# set smtp_pass="--"
+#
+# # IMAP
+# set from         = "--"
+# set imap_user         = "--"
+# set imap_pass = "--"
+# set folder = "--"
+#
 set spoolfile="+INBOX"
-#set imap_check_subscribed
 
 set header_cache = "~/.mutt/cache"
 set timeout=30
@@ -30,6 +29,7 @@ set edit_headers # See the headers when editing
 set autoedit     # Go straight to editing; don't prompt for recipients
 set forward_format="Fwd: %s"    # traditional Fwd: subject
 set attribution="On %{\%a, %d %b %Y %H:%M:%S %z}, %n wrote:"
+set postponed="+Drafts"
 
 set sidebar_width=30
 set sidebar_visible=yes
@@ -50,13 +50,17 @@ set date_format="!%H:%M %a %d %b     "
 set index_format="%4C %Z %[%b%d] %-15.15F %s"
 set folder_format="%2C %t %8s %d %N %f"
 
-set record=''
-set copy=no
+set record="+Sent"
+set copy=yes
 set include=yes                         #quote msg in reply
 set fast_reply=yes                      #no prompting on reply
 set beep=no                             #no noise
 set markers=no                          #no + on wrapped lines
 set to_chars=" +TCF"                    #no L for mail_list
+
+unset confirmappend
+folder-hook . set trash="=Trash"
+folder-hook trash$ unset trash
 
 #save-hook .* ~/keep                      #default mbox to (s)ave mail is ~/keep
 
