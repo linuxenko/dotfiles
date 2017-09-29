@@ -13,4 +13,5 @@ application/postscript ; /usr/bin/xdg-open %s
 #text/html; /usr/bin/xdg-open %s ; copiousoutput
 #text/html;      w3m -dump %s; nametemplate=%s.html; copiousoutput
 #text/html; w3m -cols ${COLUMNS:-80} -I %{charset} -T text/html; copiousoutput
-text/html; lynx -display_charset=utf-8 -dump %s; nametemplate=%s.html; copiousoutput
+#text/html; lynx -dump %s; nametemplate=%s.html; copiousoutput
+text/html; lynx -display-charset=UTF-8 -dump %s -assume_charset=%{charset}; nametemplate=%s.html; copiousoutput
