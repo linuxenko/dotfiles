@@ -62,8 +62,8 @@ unset confirmappend
 folder-hook . set trash="=Trash"
 folder-hook trash$ unset trash
 
-macro index,pager d ":set confirmappend=no delete=yes resolve=no\n<clear-flag>N<tag-prefix><delete-message>:set confirmappend=yes delete=ask-yes resolve=yes\n<next-undeleted>"
-
+#macro index,pager d ":set confirmappend=no delete=yes resolve=no\n<clear-flag>N<tag-prefix><delete-message>:set confirmappend=yes delete=ask-yes resolve=yes\n<next-undeleted>"
+#
 #save-hook .* ~/keep                      #default mbox to (s)ave mail is ~/keep
 
 bind pager h      display-toggle-weed   #toggle headers with h key
