@@ -1,0 +1,53 @@
+# Build
+
+./configure --prefix=/home/sveta/Soft/vim-8 --with-features=huge --enable-python3interp=yes --enable-gui=gtk2  --enable-multibyte
+
+
+# options (--version)
+#
+# VIM - Vi IMproved 8.0 (2016 Sep 12, compiled Nov 16 2017 09:51:00)
+Included patches: 1-1298
+Compiled by sveta@steewe
+Huge version with GTK2 GUI.  Features included (+) or not (-):
++acl             +farsi           +mouse_netterm   +tag_binary
++arabic          +file_in_path    +mouse_sgr       +tag_old_static
++autocmd         +find_in_path    -mouse_sysmouse  -tag_any_white
+-autoservername  +float           +mouse_urxvt     -tcl
++balloon_eval    +folding         +mouse_xterm     +termguicolors
++browse          -footer          +multi_byte      +terminal
+++builtin_terms  +fork()          +multi_lang      +terminfo
++byte_offset     +gettext         -mzscheme        +termresponse
++channel         -hangul_input    +netbeans_intg   +textobjects
++cindent         +iconv           +num64           +timers
++clientserver    +insert_expand   +packages        +title
++clipboard       +job             +path_extra      +toolbar
++cmdline_compl   +jumplist        -perl            +user_commands
++cmdline_hist    +keymap          +persistent_undo +vertsplit
++cmdline_info    +lambda          +postscript      +virtualedit
++comments        +langmap         +printer         +visual
++conceal         +libcall         +profile         +visualextra
++cryptv          +linebreak       -python          +viminfo
++cscope          +lispindent      +python3         +vreplace
++cursorbind      +listcmds        +quickfix        +wildignore
++cursorshape     +localmap        +reltime         +wildmenu
++dialog_con_gui  -lua             +rightleft       +windows
++diff            +menu            -ruby            +writebackup
++digraphs        +mksession       +scrollbind      +X11
++dnd             +modify_fname    +signs           -xfontset
+-ebcdic          +mouse           +smartindent     +xim
++emacs_tags      +mouseshape      +startuptime     +xpm
++eval            +mouse_dec       +statusline      +xsmp_interact
++ex_extra        +mouse_gpm       -sun_workshop    +xterm_clipboard
++extra_search    -mouse_jsbterm   +syntax          -xterm_save
+   system vimrc file: "$VIM/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+ 2nd user vimrc file: "~/.vim/vimrc"
+      user exrc file: "$HOME/.exrc"
+  system gvimrc file: "$VIM/gvimrc"
+    user gvimrc file: "$HOME/.gvimrc"
+2nd user gvimrc file: "~/.vim/gvimrc"
+       defaults file: "$VIMRUNTIME/defaults.vim"
+    system menu file: "$VIMRUNTIME/menu.vim"
+  fall-back for $VIM: "/home/sveta/Soft/vim-8/share/vim"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H -DFEAT_GUI_GTK  -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2   -g -O2 -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1       
+Linking: gcc   -L/usr/local/lib -Wl,--as-needed -o vim   -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype -lSM -lICE -lXpm -lXt -lX11 -lXdmcp -lSM -lICE  -lm -ltinfo -lelf -lnsl  -lselinux  -lacl -lattr -lgpm -ldl     -L/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu -lpython3.5m -lpthread -ldl -lutil -lm
