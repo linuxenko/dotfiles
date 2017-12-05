@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="linuxenko"
 #ZSH_THEME="avit"
 
 
@@ -68,7 +68,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions vi-mode colored-man-pages fancy-ctrl-z last-working-dir z)
+plugins=(motd git zsh-autosuggestions vi-mode colored-man-pages fancy-ctrl-z last-working-dir z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -302,6 +302,8 @@ alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+export WINEARCH=win32
+export WINEPREFIX="/home/$USER/.wine"
 
 # Ctrl + e -> Open Vim at edit current line
 bindkey '^e' edit-command-line
