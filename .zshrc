@@ -302,6 +302,8 @@ alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+alias yl="youtube-dl"
+
 export WINEARCH=win32
 export WINEPREFIX="/home/$USER/.wine"
 
