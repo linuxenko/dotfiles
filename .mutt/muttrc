@@ -58,7 +58,7 @@ set beep=no                             #no noise
 set markers=no                          #no + on wrapped lines
 set to_chars=" +TCF"                    #no L for mail_list
 
-unset confirmappend
+#unset confirmappend
 folder-hook . set trash="=Trash"
 folder-hook trash$ unset trash
 
