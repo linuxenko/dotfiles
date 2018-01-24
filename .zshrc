@@ -302,7 +302,7 @@ alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-alias yl="youtube-dl"
+alias yl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 
 export WINEARCH=win32
 export WINEPREFIX="/home/$USER/.wine"
