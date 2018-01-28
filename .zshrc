@@ -272,10 +272,10 @@ export JAVA_HOME=$HOME/Soft/java/
 export ANDROID_HOME=$HOME/Soft/Android/
 #
 # ### Added by the Heroku Toolbelt
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 
 #alias N='nautilus --no-desktop&'
 
@@ -306,6 +306,7 @@ alias yl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaud
 
 export WINEARCH=win32
 export WINEPREFIX="/home/$USER/.wine"
+export XDG_RUNTIME_DIR="/run/user/$UID"
 
 # Ctrl + e -> Open Vim at edit current line
 bindkey '^e' edit-command-line
