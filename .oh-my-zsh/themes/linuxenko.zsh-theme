@@ -4,7 +4,7 @@
 # needed to get things like current git branch
 
 precmd() {
-    print -P '%{$fg[blue]%}%m %{$reset_color%}%F{cyan}%~ $(git_prompt_info)'
+    print -P '%{$fg[blue]%}%n@%m %{$reset_color%}%F{cyan}%~ $(git_prompt_info)'
 #    print -P '%F{cyan}%~ $(git_prompt_info)'
 #    print -P '%{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 }
