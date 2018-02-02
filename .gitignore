@@ -1,2 +1,3 @@
 .oh-my-zsh/cache
 .vim/.netrwhist
+*.pyc
