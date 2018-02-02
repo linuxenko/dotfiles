@@ -266,10 +266,11 @@ setopt noflowcontrol
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-PATH=$PATH:$HOME/Soft/bin
-PATH=$PATH:$HOME/Soft/node/bin
-export JAVA_HOME=$HOME/Soft/java/
-export ANDROID_HOME=$HOME/Soft/Android/
+PATH="$PATH:$HOME/Soft/bin"
+PATH="$PATH:$HOME/Soft/node/bin"
+PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
+export JAVA_HOME="$HOME/Soft/java/"
+export ANDROID_HOME="$HOME/Soft/Android/"
 #
 # ### Added by the Heroku Toolbelt
 export PATH="$HOME/.local/bin:$PATH"
