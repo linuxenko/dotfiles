@@ -298,6 +298,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias gg="xhost +; sudo su - gg"
+alias qq="xhost +; sudo su - qq"
+alias gm="gvfs-mount"
 
 alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 # IP addresses
