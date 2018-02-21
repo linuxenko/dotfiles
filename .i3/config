@@ -206,7 +206,8 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec "i3-msg exit"
 # turn monitor off
-bindsym $mod+Shift+z exec "~/bin/lock.sh & sleep 2 && xset dpms force off"
+#bindsym $mod+Shift+z exec "~/bin/lock.sh & sleep 2 && xset dpms force off"
+bindsym $mod+Shift+z exec "sleep 1 && xset dpms force off"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -284,4 +285,5 @@ exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id compton --config ~/.i3/compton.conf -cGb
 exec --no-startup-id setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
 exec --no-startup-id feh --bg-fill ~/Pics/Louis_Wain_The_bachelor_party.jpg
-exec --no-startup-id sleep 2 && xmodmap -e 'clear Lock' -e 'keycode 66 = Control_L' -e 'add Control = Control_L'
+exec --no-startup-id sleep 2 && ~/bin/kbfix
+exec --no-startup-id /usr/bin/start-pulseaudio-x11
