@@ -65,12 +65,6 @@ bindsym $mod+Shift+g mode "Gaps"
 #workspace 1 gaps inner 0
 #workspace 1 gaps outer 0
 
-bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '7%+'"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '7%-'"
-bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
-
-bindsym $mod+Shift+a exec "pavucontrol"
-
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -278,6 +272,17 @@ for_window [class="(?i)thunderbird"] floating enable, move down 30px
 #
 # Please remove the following exec line:
 #######################################################################
+#
+bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '7%+'"
+bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '7%-'"
+bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+
+bindsym XF86AudioNext exec "cmus-remote -n"
+bindsym XF86AudioPrev exec "cmus-remote -r"
+bindsym XF86AudioPlay exec "cmus-remote -u"
+
+bindsym $mod+Shift+a exec "pavucontrol"
+
 #exec i3-config-wizard
 #exec --no-startup-id nitrogen --restore
 #exec --no-startup-id synergy
