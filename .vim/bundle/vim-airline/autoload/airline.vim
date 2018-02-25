@@ -161,7 +161,7 @@ function! airline#check_mode(winnr)
     else
       let l:mode = ['normal']
     endif
-    let w:airline_current_mode = winnr() . ' ' . get(g:airline_mode_map, l:m, l:m)
+    let w:airline_current_mode = get(g:airline_mode_map, l:m, l:m)
   else
     let l:mode = ['inactive']
     let w:airline_current_mode = get(g:airline_mode_map, '__')
