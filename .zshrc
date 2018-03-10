@@ -272,11 +272,12 @@ PATH="$PATH:$HOME/Soft/node/bin"
 PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 export JAVA_HOME="$HOME/Soft/java/"
 export ANDROID_HOME="$HOME/Soft/Android/"
+export ANDROID_NDK_HOME="$HOME/Soft/android-ndk"
 #
 # ### Added by the Heroku Toolbelt
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/Soft/Android/tools:$HOME/Soft/Android/platform-tools:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 #alias N='nautilus --no-desktop&'
