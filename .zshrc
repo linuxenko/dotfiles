@@ -267,6 +267,7 @@ setopt noflowcontrol
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
 PATH="$PATH:$HOME/bin"
 PATH="$PATH:$HOME/Soft/bin"
 PATH="$PATH:$HOME/Soft/node/bin"
