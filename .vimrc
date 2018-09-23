@@ -287,7 +287,7 @@ endif
 " syntastic plugin configuration
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': ['javascript'],
-      \ 'passive_filetypes': [] }
+      \ 'passive_filetypes': ['scss'] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -312,9 +312,9 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 "  let g:syntastic_ruby_checkers           = ['rubylint' ] " gem install ruby-lint
 "  let g:syntastic_haml_checkers           = ['haml-lint'] " gem install haml-lint
-"  let g:syntastic_scss_checkers           = ['scss_lint'] " gem install scss-lint
+" let g:syntastic_scss_checkers           = ['scss_lint'] " gem install scss-lint
 "  let g:syntastic_css_checkers            = ['csslint'  ] " sudo npm install -g csslint
-"  let g:syntastic_css_csslint_args = "--ignore=zero-units"
+"  let g:syntastic_css_csslint_args = --ignore=zero-units
 
 
 " vim-javascript
@@ -452,7 +452,8 @@ nnoremap <C-l> :bn<CR>
 inoremap <C-h> <C-O>:bp<CR><esc>
 inoremap <C-l> <C-O>:bn<CR><esc>
 
-nnoremap <c-x> :bd<cr>
+"nnoremap <c-x> :bd<cr>
 inoremap <c-x> <c-o>:bd<cr>
+nnoremap <c-x> :bp<cr>:bd #<cr>
 
 " vim:set ft=vim sw=2 ts=2:
