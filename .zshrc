@@ -333,6 +333,9 @@ preexec() {
 [ -f $HOME/.aliases.sh ] && source $HOME/.aliases.sh
 
 
+# openssl genrsa -out ./config/sslcerts/key.pem 4096
+# openssl req -new -key ./config/sslcerts/key.pem -out ./config/sslcerts/csr.pem
+# openssl x509 -req -days 365 -in ./config/sslcerts/csr.pem -signkey ./config/sslcerts/key.pem -out ./config/sslcerts/cert.pem
 
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc' ]; then source '/home/sveta/Soft/google-cloud-sdk/path.zsh.inc'; fi
