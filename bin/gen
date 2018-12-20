@@ -1,0 +1,11 @@
+#!/bin/sh
+
+LEN=$1
+
+if [ ! "$LEN" ]
+then
+  LEN=8
+fi
+
+dd if=/dev/urandom bs=1 count=200 2>/dev/null | tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c $LEN
+echo 
