@@ -1,0 +1,32 @@
+#!/bin/bash
+
+FILE=$1
+DEVICES=$(ls /dev/video* | awk -F' ' '{ print $1 }')
+
+for device in $DEVICES
+do
+  v4l2-ctl -d $device --all | grep 'Driver name\s*:\s*v4l2 loopback' > /dev/null
+
+  if [ "$?" == 0 ]
+  then
+    DEVICE=$device
+    break;
+  fi
+done
+
+
+if [ "$DEVICE" == "" ]
+then
+  echo "Device not found"
+  exit 2
+fi
+
+while [ 1 ]
+do
+  ffmpeg -re -i $FILE -f v4l2 $DEVICE
+
+  if [ "$?" != 0 ]
+  then
+    exit 0;
+  fi
+done
