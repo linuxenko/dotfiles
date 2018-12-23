@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Video redirection 
+# ffmpeg -f v4l2 -i /dev/video0 -f matroska pipe:1 | ffmpeg -i - -f v4l2 -vcodec rawvideo -pix_fmt yuv420p  /dev/video1
+#
+
 
 FILE=$1
 DEVICES=$(ls /dev/video* | awk -F' ' '{ print $1 }')
@@ -23,7 +28,7 @@ fi
 
 while [ 1 ]
 do
-  ffmpeg -re -i $FILE -f v4l2 $DEVICE
+  ffmpeg -re -i $FILE -f v4l2 -vcodec rawvideo -pix_fmt yuv420p $DEVICE
 
   if [ "$?" != 0 ]
   then
