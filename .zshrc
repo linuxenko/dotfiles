@@ -69,7 +69,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(motd git zsh-autosuggestions vi-mode colored-man-pages fancy-ctrl-z last-working-dir z)
+plugins=(motd git vi-mode fancy-ctrl-z z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,8 +84,6 @@ export KEYTIMEOUT=1
 # Use emacs keybindings even if our EDITOR is set to vi
 #bindkey -e
 bindkey -v
-#bindkey 'G' beginning-of-line
-#bindkey 'g' end-of-line
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=100000
