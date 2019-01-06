@@ -23,9 +23,8 @@ export USER_INFO=`grep -e "^$(whoami)\:" /etc/passwd | cut -d":" -f5,5`
 export TERM=screen-256color-s
 
 export EDITOR=vim
-export BROWSER=w3m
+export BROWSER=lynx
 
-export NODE_PATH=$HOME/Soft/node/lib/node_modules
 # TERM=rxvt-unicode
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -273,6 +272,12 @@ PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 export JAVA_HOME="$HOME/Soft/java/"
 export ANDROID_HOME="$HOME/Soft/Android/"
 export ANDROID_NDK_HOME="$HOME/Soft/android-ndk"
+
+export WINEARCH=win32
+export WINEPREFIX="/home/$USER/.wine"
+export XDG_RUNTIME_DIR="/run/user/$UID"
+
+export NODE_PATH=$HOME/Soft/node/lib/node_modules
 #
 # ### Added by the Heroku Toolbelt
 export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$ANDROID_HOME/bin:$PATH"
@@ -280,17 +285,14 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
 
-#alias N='nautilus --no-desktop&'
-
 alias e='vim'
-
-alias t1='tmuxinator start editor1'
 
 # git
 alias cm='git commit -a'
 alias push='git push origin'
 alias pull='git pull origin'
-alias gls='git log --oneline --color --graph --decorate --all'
+#alias gls='git log --oneline --color --graph --decorate --all'
+alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -301,35 +303,35 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias gm="gvfs-mount"
 
-alias gls="git log --pretty=\"format:%h %G? %aN  %s\" --graph"
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
-
 alias yl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
-
-export WINEARCH=win32
-export WINEPREFIX="/home/$USER/.wine"
-export XDG_RUNTIME_DIR="/run/user/$UID"
 
 # Ctrl + e -> Open Vim at edit current line
 bindkey '^e' edit-command-line
 #
 # If running in screen, set the window title to the command about to be executed
-preexec() {
-    [ -n "$WINDOW" ] && screen -X title "`print -n $1 | awk '{print $1}'`"
-}
+#preexec() {
+#    [ -n "$WINDOW" ] && screen -X title "`print -n $1 | awk '{print $1}'`"
+#}
 
 # If in screen, blank the window title when displaying the prompt
 #premd() {
 #    [ -n "$WINDOW" ] && screen -X title '' 
 #}
 #
-[ -f $HOME/.misc_exports ] && source $HOME/.misc_exports
 
 # added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+#[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
 [ -f $HOME/.aliases.sh ] && source $HOME/.aliases.sh
 
+UTDIR="/tmp/.utmp-$USER"
+
+if [ ! -d $UTDIR ]; then
+   mkdir -p $UTDIR/{0..9}
+   chmod 700 -R $UTDIR
+fi
 
 # openssl genrsa -out ./config/sslcerts/key.pem 4096
 # openssl req -new -key ./config/sslcerts/key.pem -out ./config/sslcerts/csr.pem
