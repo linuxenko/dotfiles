@@ -17,4 +17,9 @@ clear
 
 echo -e "${fg[red]}Today is:\t\t${fg[cyan]}" $(date)
 echo -e "${fg[red]}Uptime is: \t\t${fg[cyan]}" $(upinfo) "${reset_color}\n"
-cat ~/.motd
+
+if [ -f "/usr/games/lolcat" ]; then
+  /usr/games/lolcat ~/.motd
+else
+  cat ~/.motd
+fi
