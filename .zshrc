@@ -302,6 +302,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 alias gm="gvfs-mount"
+alias rsync="rsync -ah --progress"
+alias clear="clear && lolcat ~/.motd"
 
 # IP addresses
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
