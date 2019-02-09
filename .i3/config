@@ -202,7 +202,7 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 # turn monitor off
 #bindsym $mod+Shift+z exec "~/bin/lock.sh & sleep 2 && xset dpms force off"
 bindsym $mod+Shift+z exec "sleep 1 && xset dpms force off"
-
+bindsym $mod+Shift+w exec "change-layout fourbox"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -238,8 +238,6 @@ floating_minimum_size 480 x 240
 
 # Window assignments
 
-#assign [class="(?i)thunderbird] workspace 3
-
 #for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] border pixel 0
 #for_window [class="^Spotify$"] floating enable
@@ -262,7 +260,7 @@ for_window [class="(?i)vlc"] floating enable
 for_window [class="(?i)mplayer"] floating enable
 for_window [class="Anki"] floating enable, move position mouse
 #for_window [class="(?i)zathura"] floating enable, move position mouse
-for_window [class="(?i)thunderbird"] floating enable, move down 30px
+#for_window [class="(?i)thunderbird"] floating enable, move down 30px
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
 # keysym-based config which used their favorite modifier (alt or windows)
@@ -289,6 +287,8 @@ bindsym $mod+Shift+a exec "pavucontrol"
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id compton --config ~/.i3/compton.conf -cGb
 exec --no-startup-id setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
-exec --no-startup-id feh --bg-fill ~/Pics/Louis_Wain_The_bachelor_party.jpg
-exec --no-startup-id sleep 2 && ~/bin/kbfix
-exec --no-startup-id /usr/bin/start-pulseaudio-x11
+#exec --no-startup-id feh --bg-fill ~/Pics/Louis_Wain_The_bachelor_party.jpg
+exec --no-startup-id feh --bg-fill ~/Desktop/wallpaper.jpg
+exec --no-startup-id sleep 1 && /usr/bin/conky -d -c ~/.conky/conkyrc &
+exec --no-startup-id sleep 2 && ~/bin/kbfix &
+#exec --no-startup-id /usr/bin/start-pulseaudio-x11
