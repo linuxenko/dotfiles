@@ -456,4 +456,13 @@ inoremap <C-l> <C-O>:bn<CR><esc>
 inoremap <c-x> <c-o>:bd<cr>
 nnoremap <c-x> :bp<cr>:bd #<cr>
 
+map ш i
+map р h
+map о j
+map л k
+map д l
+map щ o
+map Ж :
+map вв dd
+
 " vim:set ft=vim sw=2 ts=2:
