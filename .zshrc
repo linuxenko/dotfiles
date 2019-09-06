@@ -68,7 +68,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(motd git vi-mode fancy-ctrl-z z)
+plugins=(motd git vi-mode fancy-ctrl-z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -268,6 +268,10 @@ PATH="$HOME/bin:/bin:/sbin:/usr/bin:/usr/games/:/usr/sbin:/usr/local/bin:/usr/lo
 PATH="$PATH:$HOME/bin"
 PATH="$PATH:$HOME/Soft/bin"
 PATH="$PATH:$HOME/Soft/node/bin"
+PATH="$PATH:$HOME/Soft/cross-compiler-mips/bin"
+#PATH="$PATH:$HOME/Soft/cross-compiler-mips32-musl/bin"
+PATH="$PATH:$HOME/Soft/cross-compiler-armv5l/bin"
+PATH="$PATH:$HOME/Soft/xtensa-lx106-elf/bin"
 PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin"
 export JAVA_HOME="$HOME/Soft/java/"
 export ANDROID_HOME="$HOME/Soft/Android/"

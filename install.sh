@@ -3,7 +3,7 @@
 # File Name     : install.sh
 # Created By    : Svetlana Linuxenko, <svetlana@linuxenko.pro>, www.linuxenko.pro
 # Creation Date : [2018-12-04 18:54]
-# Last Modified : [2018-12-04 19:20]
+# Last Modified : [2019-09-06 09:58]
 # Description   :  
 #################################################################################
 
@@ -12,6 +12,7 @@ SOURCE_FILES="
 .zshrc
 .vim
 .vimrc
+.vifm
 .tmux.conf"
 
 PWD=`pwd`
