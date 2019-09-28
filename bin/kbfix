@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Reset capslock from command line
+# xdotool key Caps_Lock
+
 #bluetoothctl << EOF
 #connect 20:73:AB:7E:AF:55
 #EOF

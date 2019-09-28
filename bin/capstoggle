@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Reset capslock from command line
+xdotool key Caps_Lock
