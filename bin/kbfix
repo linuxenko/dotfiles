@@ -7,6 +7,8 @@
 #connect 20:73:AB:7E:AF:55
 #EOF
 
+# xev to get a keycode
+
 #sleep 1
 #
 setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
