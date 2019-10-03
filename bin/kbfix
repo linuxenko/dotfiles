@@ -15,5 +15,10 @@ xmodmap -e 'clear Lock' -e 'keycode 66 = Control_L' \
   -e 'keycode 225 = Insert' \
   -e 'keycode 180 = Alt_L' \
   -e 'keycode 87 = Down' \
-  -e 'keycode 88 = Up'
+  -e 'keycode 88 = Up' \
+  -e 'keycode 167 = XF86AudioLowerVolume' \
+  -e 'keycode 166 = XF86AudioRaiseVolume' \
+  -e 'keycode 181 = XF86AudioPlay'
+
+
 xmodmap ~/.Xmodmap
