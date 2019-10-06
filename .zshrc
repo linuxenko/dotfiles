@@ -23,7 +23,7 @@ export USER_INFO=`grep -e "^$(whoami)\:" /etc/passwd | cut -d":" -f5,5`
 export TERM=screen-256color-s
 
 export EDITOR=vim
-export BROWSER=lynx
+export BROWSER=ff
 
 # TERM=rxvt-unicode
 # Uncomment the following line to use case-sensitive completion.
