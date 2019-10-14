@@ -9,10 +9,10 @@
 
 ! Remap caps lock to special modifier, but still allow shift+caps to 
 ! toggle caps lock
-clear lock
-clear mod5
-add lock = Mode_switch
-keycode 66 = Mode_switch Caps_Lock NoSymbol NoSymbol
+!clear lock
+!clear mod5
+! kkadd lock = Mode_switch
+!keycode 66 = Mode_switch Caps_Lock NoSymbol NoSymbol
 ! keycode 43 = h H Left Left
 ! keycode 44 = j J Down Down
 ! keycode 45 = k K Up Up
