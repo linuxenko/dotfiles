@@ -287,7 +287,7 @@ endif
 " syntastic plugin configuration
 let g:syntastic_mode_map = { 'mode': 'active',
       \ 'active_filetypes': ['javascript'],
-      \ 'passive_filetypes': ['scss'] }
+      \ 'passive_filetypes': ['scss', 'c', 'cpp'] }
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -297,7 +297,7 @@ let g:syntastic_loc_list_height = 3
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_riot_checkers = ['eslint']
 let g:syntastic_python_pylint_args = '-E'
@@ -307,8 +307,8 @@ let g:syntastic_python_checkers = ['pylint3']
 
 let g:syntastic_auto_jump               = 0
 
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+" let g:syntastic_cpp_compiler = 'g++'
+" let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 "  let g:syntastic_ruby_checkers           = ['rubylint' ] " gem install ruby-lint
 "  let g:syntastic_haml_checkers           = ['haml-lint'] " gem install haml-lint
