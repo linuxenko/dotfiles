@@ -12,6 +12,7 @@
 #sleep 1
 #
 setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
+setxkbmap -option compose:rwin
 #xmodmap -e 'clear Lock' -e 'keycode 66 = Control_L' \
 #  -e 'add Control = Control_L' \
 xmodmap -e 'keycode 225 = Insert' \

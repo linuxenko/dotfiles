@@ -290,7 +290,8 @@ exec --no-startup-id compton --config ~/.i3/compton.conf -cGb
 exec --no-startup-id setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
 #exec --no-startup-id feh --bg-fill ~/Pics/Louis_Wain_The_bachelor_party.jpg
 #exec --no-startup-id feh --bg-fill ~/Desktop/wallpaper.jpg
-exec --no-startup-id feh --bg-scale --no-xinerama ~/Desktop/wallpaper.jpg
+#exec --no-startup-id feh --bg-scale --no-xinerama ~/Desktop/wallpaper.jpg
+exec --no-startup-id feh --bg-scale --no-xinerama ~/.i3/wallpaper.jpg
 exec --no-startup-id sleep 1 && /usr/bin/conky -d -c ~/.conky/conkyrc &
 exec --no-startup-id sleep 2 && ~/bin/kbfix &
 #exec --no-startup-id /usr/bin/start-pulseaudio-x11
