@@ -284,14 +284,15 @@ bindsym $mod+Shift+a exec "pavucontrol"
 #exec i3-config-wizard
 #exec --no-startup-id nitrogen --restore
 #exec --no-startup-id synergy
-exec --no-startup-id xrandr --output DVI-I-1 --right-of VGA-0
+#exec --no-startup-id xrandr --output DVI-I-1 --right-of VGA-0
 exec --no-startup-id xrdb ~/.Xresources
 #exec --no-startup-id compton --config ~/.i3/compton.conf -cGb
 exec --no-startup-id setxkbmap -layout "us,ru" -option "grp:alt_shift_toggle"
 #exec --no-startup-id feh --bg-fill ~/Pics/Louis_Wain_The_bachelor_party.jpg
 #exec --no-startup-id feh --bg-fill ~/Desktop/wallpaper.jpg
 #exec --no-startup-id feh --bg-scale --no-xinerama ~/Desktop/wallpaper.jpg
-exec --no-startup-id feh --bg-scale --no-xinerama ~/.i3/wallpaper.jpg
+#exec --no-startup-id feh --bg-scale --no-xinerama ~/.i3/wallpaper.jpg
+exec --no-startup-id feh --bg-fill  ~/.i3/wallpaper.jpg
 exec --no-startup-id sleep 1 && /usr/bin/conky -d -c ~/.conky/conkyrc &
 exec --no-startup-id sleep 2 && ~/bin/kbfix &
 #exec --no-startup-id /usr/bin/start-pulseaudio-x11
